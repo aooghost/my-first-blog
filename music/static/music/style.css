@@ -1,0 +1,70 @@
+body{
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: white url("images/tlo.jpg");
+}
+
+.jumbotron {
+  background-color: #111;
+
+}
+
+.container1 {
+  background-image: url("images/jumbobackground.png");
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: contain;;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #111;
+
+}
+
+.navbar{
+  border-radius: 0;
+}
+
+h1,h1 a {
+  color: #FCA205;
+  font-size: 14pt;
+}
+
+h2,h2 a{
+  color: #337ab7;
+  font-size: 14pt;
+}
+
+p, p1{
+  color: #aaaaaa;
+}
+
+p1 {
+  font-size: 8pt;
+}
+
+.panel {
+    border: 0;
+    border-color: #444;
+}
+
+.panel-body {
+background:#111;
+}
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #111;
+    color: grey;
+}
+
+.table {
+  background:#111;
+}

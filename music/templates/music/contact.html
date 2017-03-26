@@ -1,0 +1,114 @@
+
+{% extends 'music/base.html' %}
+{% block title %}Contact us{% endblock %}
+{% block body %}
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Contact Us</h1>
+        <p>RG14 2ER, Newbury, Berkshire, Phone: 0489 233 933, info@satoriaudio.co.uk</p>
+        <hr>
+      </div>
+    </div>
+
+    <!--MAIL FORM-->
+  <h2>Mail form:</h2>
+  <form class="form-horizontal" role="form" method="post" action="index.php">
+  	<div class="form-group">
+  		<label for="name" class="col-sm-2 control-label"><p>Name</p></label>
+  		<div class="col-sm-5">
+  			<input type="text" class="form-control" id="name" name="name" placeholder="Type your name" value="">
+  		</div>
+  	</div>
+  	<div class="form-group">
+  		<label for="email" class="col-sm-2 control-label"><p>Email</p></label>
+  		<div class="col-sm-5">
+  			<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+  		</div>
+  	</div>
+  	<div class="form-group">
+  		<label for="message" class="col-sm-2 control-label"><p>Message</p></label>
+  		<div class="col-sm-5">
+  			<textarea class="form-control" rows="4" name="message"></textarea>
+  		</div>
+  	</div>
+  	<div class="form-group">
+  		<label for="human" class="col-sm-2 control-label"><p>2 + 3 = ?</p></label>
+  		<div class="col-sm-5">
+  			<input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+  		</div>
+  	</div>
+  	<div class="form-group">
+  		<div class="col-sm-5 col-sm-offset-2">
+  			<input id="submit" name="submit" type="submit" value="Send message" class="btn btn-primary">
+  		</div>
+  	</div>
+  	<div class="form-group">
+  		<div class="col-sm-5 col-sm-offset-2">
+  			<!--Will be used to display an alert to the user-->
+  		</div>
+  	</div>
+  </form>
+
+    <div class="row">
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+            <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!--[if lt IE 9]>
+              <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+              <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+            <![endif]-->
+
+            <style>
+              #map-container { height: 250px }
+            </style>
+        </head>
+
+            <h2>Where to find us:</h2>
+            <div id="map-container" class="col-sm-5 col-sm-offset-2"></div>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+            <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+            <script>
+              function init_map() {
+        		var var_location = new google.maps.LatLng(51.402009, -1.325588);
+
+                var var_mapoptions = {
+                  center: var_location,
+                  zoom: 10
+                };
+
+        		var var_marker = new google.maps.Marker({
+        			position: var_location,
+        			map: var_map,
+        			title:"Our Location"});
+
+                var var_map = new google.maps.Map(document.getElementById("map-container"),
+                    var_mapoptions);
+
+        		var_marker.setMap(var_map);
+
+              }
+
+              google.maps.event.addDomListener(window, 'load', init_map);
+
+            </script>
+    </div>
+
+<div class="row">
+
+        <p>Newbury, Berkshire, UK</p>
+        <p>RG14 2ER</p>
+        <p>Phone: 0489 233 933</p>
+        <p>Email: info@satoriaudio.co.uk</p>
+</div>
+
+
+
+{% endblock %}

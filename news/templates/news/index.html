@@ -1,0 +1,67 @@
+{% extends "music/base.html" %}
+
+{% block title %}Satori News{% endblock %}
+
+{% block body %}
+    <head>
+        <meta charset="UTF-8">
+
+        {% load staticfiles %}
+
+        <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    </head>
+
+
+    <div class="jumbotron">
+      <div class="container">
+          <div class="container1">
+            <br><br><br><br><br><br><br><br><br><br>
+          </div>
+
+             <hr class="my-1">
+        <h1>experience the sound</h1>
+        <p>custom made and universal monitors made by enthusiasts with passion. Outstanding quality for reasonable price.</p>
+
+        <p>
+            <a class="btn btn-primary btn-lg" href="#foo" role="button"><span class="badge">{{ posts.count }}</span> new posts &raquo;</a>&nbsp;
+            <a class="btn btn-primary btn-lg" href="{% url 'music:index'%}" role="button"><span class="badge">2</span> new products &raquo;</a>
+            <a class="btn btn-primary btn-lg" href="{% url 'music:index'%}" role="button"><span class="badge">24</span> new shells and faceplates &raquo;</a>
+        </p>
+      </div>
+    </div>
+
+
+    <div id="foo">
+        <h2><a href="#"><span class="badge">{{ iloscPostow }}</span> NEWS</a></h2>
+    </div>
+
+
+
+    <div class="container" >
+          <!-- Example row of columns -->
+          <div class="row">
+            {% for post in posts %}
+            <div class="col-md-4 col-xs-6">
+              <h2><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> {{ post.title }}</h2>
+              <p1>published: {{ post.published_date}}</p1>
+              <p>{{ post.text }}</p>
+              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            </div>
+            {% endfor %}
+          </div>
+
+
+
+
+      </div> <!-- /container -->
+
+
+
+
+
+{% include 'music/contact.html' %}
+      <hr>
+<footer>
+  <p>&copy; 2016 Satori Audio</p>
+</footer>
+{% endblock %}

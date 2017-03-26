@@ -1,0 +1,87 @@
+{% extends 'music/base.html' %}
+
+{% block body %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Custom Made in-ear Monitors</h1>
+    <p>Introducing our handcrafted monitors</p>
+    <hr>
+  </div>
+</div>
+
+  <!-- LEFT PANEL -->
+
+  {% for album in all_albums %}
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+    <div class="panel panel-default">
+    <div class="panel-body">
+
+      <h2>Model: {{ album.album_title }}</h2>
+      <a href="{% url 'music:detail' album.id %}">
+            {% if album.album_logo %}
+                <img src="{{ album.album_logo }}" class="img-responsive">
+             {% else %}
+                 <h3>No image to display</h3>
+             {% endif %}
+         </a>
+         <h2>Drivers: {{ album.genere }}</h2>
+         <h2>Price from: {{ album.price }} £</h2>
+         <h2></h2>
+         <a class="btn btn-primary" href="{% url 'music:detail' album.id %}" role="button">available versions &raquo;</a>
+
+
+  </div>
+  </div>
+  </div>
+
+    <!-- RIGHT PANNEL -->
+  <div class="col-sm-8 col-md-9">
+  <div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Details</div>
+  <div class="panel-body">
+      <p>
+          Model short description Model short description Model short description Model short description Model short description Model short description
+      </p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+      <thead>
+      <tr>
+          <th>Sensitivity</th>
+          <th>Frequency Response</th>
+          <th>Impedance</th>
+          <th>Cable</th>
+          <th>Warranty</th>
+      </tr>
+      </thead>
+      <tbody>
+
+          <tr>
+              <td>114 dB SPL @ 1 mW</td>
+              <td>20 Hz - 16 kHz</td>
+              <td>25 ohms @ 1 kHz</td>
+              <td>EPIC Replaceable cable</td>
+              <td>2-year warranty</td>
+          </tr>
+
+      </tbody>
+  </table>
+</div>
+ </div>
+</div>
+   {% endfor %}
+</ul>
+
+<div id="universal">
+</div>
+
+<hr>
+<footer>
+  <p>&copy; 2016 Company, Inc.</p>
+</footer>
+
+{% endblock %}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Satori Audio{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}">
+
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+      <!--- Header (logo i przycisk jak strona jest waska) -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'music:cover' %}"><img src="{% static 'music/images/menulogo.png' %}">
+        </a>
+        <a class="navbar-brand" href="{% url 'music:cover' %}" style="font-family: Solid Edge Stencil"></a>
+      </div>
+
+      <!--- Items -->
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="nav navbar-nav">
+          <li class="">
+            <a href="{% url 'news' %}">
+                <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp; News &nbsp; <span class="badge">{{ posts.count }}</span>
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="{% url 'music:index' %}">Custom Made Monitors</a></li>
+                <li><a href="{% url 'music:index' %}#universal">Universal Monitors</a></li>
+                <li class="disabled"><a href="#">ER's</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Sleeping Plugs</a></li>
+                <li class="disabled"><a href="#">Swim Plugs</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="disabled"><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="#">
+              <span class="glyphicon glyphicon-headphones" aria-hidden="true"></span>&nbsp; About
+            </a>
+          </li>
+          <li class="">
+            <a href="{% url 'music:contact' %}">
+              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp; Contact Us
+            </a>
+          </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="">
+              <a href="{% url 'music:contact' %}"><i class="fa fa-envelope"></i></a>
+            </li>
+            <li class="">
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="{% url 'admin:index' %}"><i class="fa fa-cogs"></i> Admin</a>
+            </li>
+        </ul>
+      </div>
+
+    </div>
+</nav>
+
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>
