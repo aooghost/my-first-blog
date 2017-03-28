@@ -2,53 +2,20 @@
 {% extends 'music/base.html' %}
 {% block title %}Contact us{% endblock %}
 {% block body %}
-
+    <div id="contact"></div>
     <div class="jumbotron">
       <div class="container">
         <h1> <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Contact Us</h1>
-        <p>RG14 2ER, Newbury, Berkshire, Phone: 0489 233 933, info@satoriaudio.co.uk</p>
+        <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> RG14 2ER, Newbury, Berkshire</p>
+         <p>
+            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 07475 022 228 <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> satoriaudio@gmail.com
+         </p>
         <hr>
-      </div>
+    </div>
     </div>
 
     <!--MAIL FORM-->
-  <h2>Mail form:</h2>
-  <form class="form-horizontal" role="form" method="post" action="index.php">
-  	<div class="form-group">
-  		<label for="name" class="col-sm-2 control-label"><p>Name</p></label>
-  		<div class="col-sm-5">
-  			<input type="text" class="form-control" id="name" name="name" placeholder="Type your name" value="">
-  		</div>
-  	</div>
-  	<div class="form-group">
-  		<label for="email" class="col-sm-2 control-label"><p>Email</p></label>
-  		<div class="col-sm-5">
-  			<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-  		</div>
-  	</div>
-  	<div class="form-group">
-  		<label for="message" class="col-sm-2 control-label"><p>Message</p></label>
-  		<div class="col-sm-5">
-  			<textarea class="form-control" rows="4" name="message"></textarea>
-  		</div>
-  	</div>
-  	<div class="form-group">
-  		<label for="human" class="col-sm-2 control-label"><p>2 + 3 = ?</p></label>
-  		<div class="col-sm-5">
-  			<input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
-  		</div>
-  	</div>
-  	<div class="form-group">
-  		<div class="col-sm-5 col-sm-offset-2">
-  			<input id="submit" name="submit" type="submit" value="Send message" class="btn btn-primary">
-  		</div>
-  	</div>
-  	<div class="form-group">
-  		<div class="col-sm-5 col-sm-offset-2">
-  			<!--Will be used to display an alert to the user-->
-  		</div>
-  	</div>
-  </form>
+
 
     <div class="row">
         <head>
@@ -66,7 +33,7 @@
             </style>
         </head>
 
-            <h2>Where to find us:</h2>
+            <p></p>
             <div id="map-container" class="col-sm-5 col-sm-offset-2"></div>
 
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -100,15 +67,6 @@
 
             </script>
     </div>
-
-<div class="row">
-
-        <p>Newbury, Berkshire, UK</p>
-        <p>RG14 2ER</p>
-        <p>Phone: 0489 233 933</p>
-        <p>Email: info@satoriaudio.co.uk</p>
-</div>
-
 
 
 {% endblock %}
