@@ -5,13 +5,13 @@ app_name ='music'
 
 urlpatterns = [
     #/music
-    url(r'^$', views.index, name='index'),
+    url(r'^music$', views.index, name='index'),
 
     #/music/712/
-    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^music/(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
 
     #music/contact
     url(r'^contact/$', views.contact, name='contact'),
 
-    url(r'^cover/$', views.cover, name='cover'),
+    url(r'^$', views.cover, name='cover'),
 ]
