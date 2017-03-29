@@ -14,4 +14,8 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
 
     url(r'^$', views.cover, name='cover'),
+
+    #mailurls
+    url(r'^email/$', views.email, name='email'),
+
 ]
