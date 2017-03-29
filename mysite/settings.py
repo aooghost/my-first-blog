@@ -25,7 +25,7 @@ SECRET_KEY = '4i#t(5-#lb9*1kp3r^f&ro^ehuc8gw89t$c&@w@3_ct!f0!ne!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['satoriaudio.pythonanywhere.com']
 
 
 # Application definition
