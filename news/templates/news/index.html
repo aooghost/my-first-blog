@@ -3,13 +3,7 @@
 {% block title %}Satori News{% endblock %}
 
 {% block body %}
-    <head>
-        <meta charset="UTF-8">
 
-        {% load staticfiles %}
-
-        <link rel="stylesheet" href="{% static 'css/news.css' %}">
-    </head>
 
 
     <div class="jumbotron">
@@ -32,16 +26,32 @@
 
 
     <div id="foo">
-        <h2><a href="#"><span class="badge">{{ iloscPostow }}</span> NEWS</a></h2>
+        <h2><a href="#"><span class="badge">{{ iloscPostow }}</span></a></h2>
     </div>
 
 
 
-    <div class="container" >
+
           <!-- Example row of columns -->
           <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-3">
+                  <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>News</h2>
+                      {% for post in posts %}
+                      <p>
+                          <a href="#{{ post.title }}">{{ post.title }}</a>
+                      </p>
+                      {% endfor %}
+                  </div>
+                  </div>
+              </div>
+
+             <div class="col-md-9 col-xs-8">
             {% for post in posts %}
-            <div class="col-md-4 col-xs-6">
+
+            <div class="col-md-4 col-sm-6 col-xs-12" >
+                <div id="{{ post.title }}"></div>
               <h2><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> {{ post.title }}</h2>
               <p1>published: {{ post.published_date}}</p1>
               <p>{{ post.text }}</p>
@@ -49,11 +59,12 @@
             </div>
             {% endfor %}
           </div>
+      </div>
 
 
 
 
-      </div> <!-- /container -->
+
 
 
 
