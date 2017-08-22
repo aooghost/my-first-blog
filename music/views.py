@@ -65,3 +65,6 @@ def email(request):
             return redirect('music:email')
 
     return render(request, 'music/email.html', {'form': form_class,})
+
+def accessories(request):
+    return render(request, 'music/accessories.html')

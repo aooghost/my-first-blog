@@ -18,4 +18,7 @@ urlpatterns = [
     #mailurls
     url(r'^email/$', views.email, name='email'),
 
+    #mailurls
+    url(r'^accessories/$', views.accessories, name='accessories'),
+
 ]
