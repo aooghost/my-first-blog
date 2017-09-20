@@ -3,7 +3,7 @@
 <style>
 body {
   /* Location of the image */
-  background-image: url(https://ikrp0q.bl3302.livefilestore.com/y4mzOhCbDxM9mHBgNzPbRR6RFZt7jG9KW66YuJfLbFuCv9fdk5b79x5xbSvwWTHOqWeNLHVD_TLsU0jWNGvU5NoYgRwfcl3sJz-9VRtm4kSjDtv_poLE_eVW6r5PXZB7tpbJkrDK53aBTFtt_p3P_TRcdZfhCpEVM_M_XdjwTXDUbAmGz7RgfH5ReD7KhdRIhkuN7_gONU5tl8bTXNfoem8fw?width=1024&height=576&cropmode=none);
+  background-image: url(https://eu4vvg-am3pap001.files.1drv.com/y4moR9xUFAI5FpP-lpIGvwxT6nUccpdMNM1tdm-7_3kHkzpMX1AomdbyNWkhOlWlwagv-a5bnYM0WOqi3DdlUQL4-qM6-sDsM0yLqegKnsyMbiMOUN1u1bGNVIQTYITnoPhiXtWRkXvQ2m5SBDkDNRkbdVG0xC6pp-Ht_dPfL_nqZvSiHSyXCqC47mCf6REwumhrN7cBsBxKi0k3Zr9aTPWhA?width=1024&height=576&cropmode=none);
   /* Background image is centered vertically and horizontally at all times */
   background-position: center center;
 
@@ -22,6 +22,21 @@ body {
      while the background image is loading */
   background-color: #464646;
 }
+
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 </style>
 
 <head>
@@ -56,4 +71,9 @@ body {
     </div>
 </nav>
 </body>
+<div class="img">
+<a href="{% url 'news' %}">
+<img src="https://eu4uvg-am3pap001.files.1drv.com/y4p54arwfJvocDnTJsKF1FKOdKUZNsjKiAMhuoWDnBRMMOhFs-dROz7KcdzFOYU5MZDI6Yc2fns5NUtUX0_cReIGpzM5FPDaSO1Urg2uWUPE-wBsE9enCt9lGARcC0hMPAUcUrOC9JdL0j-yO78EqteUrUAVv7XZx4di8D5W-xY5XGXI66SziY4-OGCKOKoYca7EFhf3yzTNfJym1U3veOsAA/coverlogo.png?psid=1">
+</a>
+</div>
 </html>
