@@ -11,6 +11,13 @@ class Album(models.Model):
     album_logo = models.CharField(max_length=1000)
     price = models.CharField(max_length=20)
 
+    description = models.CharField(max_length=1000, default="no data", null=True)
+    sensitivity = models.CharField(max_length=20, default="no data")
+    frequency = models.CharField(max_length=20, default="no data")
+    impedance = models.CharField(max_length=20, default="no data")
+    cable = models.CharField(max_length=40, default="no data")
+    noise = models.CharField(max_length=40, default="no data")
+
     def __str__(self):
         return self.album_title + ' - ' + self.artist
 
